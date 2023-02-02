@@ -46,14 +46,13 @@ section{
     place-items: center;
     background-color: rgb(85, 102, 255);
     justify-content: space-evenly;
-    list-style: none;
 }
 
 .navConf ul li{
     display: flex;
     gap: 10px;
     color: white;
-    list-style: none;
+    text-decoration: none;
     align-items: center;
 }
 
@@ -63,5 +62,22 @@ section{
     min-width: 100%;
     font-size: 2em;
     justify-content: space-evenly;
-    list-style: none;
+    text-decoration: none;
+}
+
+@media(max-width:600px){
+    .navConf ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navConf{
+        z-index: -1;
+    }
 }
