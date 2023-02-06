@@ -1,12 +1,19 @@
 import React from "react";
-import { Outlet } from "react-router";
+import { Outlet, NavLink } from "react-router";
 import AuthConsumer from "../assets/hooks/auth";
 
 const Home = () => {
-  const auth= AuthConsumer();
+  const [,dispatch]= AuthConsumer();
   return (
     <>
       <h2>Home component</h2>
+      <button
+        onClick={()=>{
+          dispatch({type:"logout"})
+        }
+
+        }
+        >Cerrar sesión</button>
     </>
   );
 };
